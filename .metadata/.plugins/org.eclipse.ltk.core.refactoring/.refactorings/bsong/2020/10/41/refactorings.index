@@ -1,0 +1,36 @@
+1601802103375	Rename package 'controller'
+1601802410778	Move 3 resources to 'public'
+1601802419888	Move 'assets' to 'admin'
+1601802551907	Move 'inc' to 'public'
+1601802576546	Move 'inc' to 'admin'
+1601804656727	Copy compilation unit
+1601804707246	Copy compilation unit
+1601804721397	Copy compilation unit
+1601806321706	Copy compilation unit
+1601806349377	Rename type 'PublicsCatController'
+1601806526604	Copy compilation unit
+1601806624897	Move 2 resources to 'song'
+1601807331823	Copy compilation unit
+1601807354070	Copy compilation unit
+1601807368611	Copy compilation unit
+1602074681581	Copy file
+1602077885122	Copy compilation unit
+1602077922560	Copy file
+1602080620550	Copy compilation unit
+1602245280758	Copy compilation unit
+1602245519870	Copy file
+1602249461320	Copy file
+1602256022172	Copy file
+1602258463043	Copy compilation unit
+1602258492987	Rename type 'AdminEditCatController'
+1602261554154	Copy file
+1602263557572	Copy file
+1602306741089	Copy compilation unit
+1602306754774	Rename type 'AdminAddCatController'
+1602306794985	Copy file
+1602308195296	Copy compilation unit
+1602308229097	Rename type 'AdminEditCatController'
+1602308417267	Copy file
+1602316204576	Delete element
+1602316245303	Delete element
+1602319357394	Rename type 'songs'

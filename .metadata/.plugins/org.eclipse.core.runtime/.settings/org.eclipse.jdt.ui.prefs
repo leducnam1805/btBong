@@ -1,0 +1,13 @@
+breadcrumb.org.eclipse.jst.j2ee.J2EEPerspective=true
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaPostfixProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaChainProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.RandomAccess"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.AbstractList"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.AbstractCollection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.ArrayList"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="models.Category"><rhs name\="models.Category"/></lhs><lhs name\="daos.AbstractDAO"><rhs name\="daos.ContactDao"/><rhs name\="daos.CatDao"/><rhs name\="daos.UserDao"/><rhs name\="daos.CatUserDao"/><rhs name\="daos.SongDao"/></lhs><lhs name\="daos.CatDao"><rhs name\="daos.CatDao"/></lhs><lhs name\="daos.UserDao"><rhs name\="daos.UserDao"/></lhs><lhs name\="models.User"><rhs name\="models.User"/></lhs><lhs name\="daos.ContactDao"><rhs name\="daos.ContactDao"/></lhs><lhs name\="models.Contact"><rhs name\="models.Contact"/></lhs><lhs name\="models.Songs"><rhs name\="models.Songs"/></lhs><lhs name\="daos.SongDao"><rhs name\="daos.SongDao"/></lhs><lhs name\="java.io.File"><rhs name\="java.io.File"/></lhs><lhs name\="daos.CatUserDao"><rhs name\="daos.CatUserDao"/></lhs><lhs name\="models.CatUser"><rhs name\="models.CatUser"/></lhs><lhs name\="daos.PhanQuyenDao"><rhs name\="daos.PhanQuyenDao"/></lhs><lhs name\="models.PhanQuyen"><rhs name\="models.PhanQuyen"/></lhs></history>
+content_assist_number_of_computers=23
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=18
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

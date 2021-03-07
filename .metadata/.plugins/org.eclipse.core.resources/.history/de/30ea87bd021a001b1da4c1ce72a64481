@@ -1,0 +1,154 @@
+﻿<%@page import="models.CatUser"%>
+<%@page import="java.util.List"%>
+<%@page import="util.StringUtil"%>
+<%@page import="models.Category"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ include file="/templates/admin/inc/header.jsp" %>
+<%@ include file="/templates/admin/inc/leftbar.jsp" %>
+<div id="page-wrapper">
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Phân quyền tài khoản</h2>
+            </div>
+        </div>
+        <!-- /. ROW  -->
+        <hr />
+        <%
+        	//String urlSlugCatAdd = request.getContextPath()+"/admin/quan-ly-danh-muc/them-danh-muc"+".html";
+        %>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Advanced Tables -->
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <%-- <div class="row">
+                              <div class="col-sm-6">
+                                    <a href="" class="btn btn-success btn-md">Thêm</a>
+                                </div>
+                                <div class="col-sm-6" style="text-align: center;">
+                                    <form method="GET" action="<%=request.getContextPath()%>/admin/cat/index">
+                                        <input type="submit" name="search" value="Tìm kiếm" class="btn btn-warning btn-sm" style="float:right" />
+                                        <input type="search" name="nameCat" value="${nameCat}"class="form-control input-sm" placeholder="nhập loại tài khoản" style="float:right; width: 300px;" />
+                                        <div style="clear:both"></div>
+                                    </form><br />
+                                </div>
+                            </div> --%>
+							<%
+								if(!"".equals(request.getParameter("msg"))){
+									String msg = request.getParameter("msg");
+									if("OK".equals(msg)){
+										%>
+											<div class="alert alert-success" role="alert">
+												 Xử lý thành công!
+											</div>
+										<%
+									}
+								}
+							%>
+                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Loại tài khoản</th>
+                                        <th>Quyền thêm</th>
+                                        <th>Quyền sửa</th>
+                                        <th>Quyền xóa</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <%
+                                	List<CatUser> phanQuyenList = (List<CatUser>)request.getAttribute("phanQuyenList");
+	                                if(phanQuyenList.size() > 0){
+	                                	%>
+		                                	<%
+		                                		int i = 0;
+		                                		for(CatUser phanQuyen : phanQuyenList){
+		                                			i++;
+		                                			int cuid = (Integer) phanQuyen.getId();
+		                                			String cuname = phanQuyen.getName();
+		                                			boolean addquyen = phanQuyen.isAddquyen();
+		                                			boolean editquyen = phanQuyen.isEditquyen();
+		                                			boolean delquyen = phanQuyen.isDelquyen();
+		                                			%>
+		                                				<tr>
+						                                	<td><%=i %></td>
+						                                	<td><%=cuname %></td>
+						                                	<td>
+						                                		<div class="form-group">
+														    		<div class="col-sm-7 col-md-7">
+														    			<div class="input-group char-art">
+														    				<div id="radioBtn" class="btn-group">
+														    					<a class="btn-sm <%if(addquyen == true){out.print("active btn btn-primary");}else{out.print("btn btn-danger");}; %>" data-toggle="happy" data-title="Y">Bật</a>
+														    					<a id="add-tat"class="btn-sm <%if(addquyen == false){out.print("notactive btn btn-primary");}else{out.print("btn btn-danger");}; %>" data-toggle="happy" data-title="N">Tắt</a>
+														    				</div>
+														    				<input type="hidden" name="happy" id="happy">
+														    			</div>
+														    		</div>
+														    	</div>
+						                                	</td>
+						                                	<td>
+						                                		<div class="form-group">
+														    		<div class="col-sm-7 col-md-7">
+														    			<div class="input-group">
+														    				<div id="radioBtn" class="btn-group">
+														    					<a class="btn-sm <%if(editquyen == true){out.print("active btn btn-primary");}else{out.print("btn btn-danger");}; %>" data-toggle="happy" data-title="Y">Bật</a>
+														    					<a class="btn-sm <%if(editquyen == false){out.print("notactive btn btn-primary");}else{out.print("btn btn-danger");}; %>" data-toggle="happy" name="addtat"data-title="N">Tắt</a>
+														    				</div>
+														    				<input type="hidden" name="happy" id="happy">
+														    			</div>
+														    		</div>
+														    	</div>
+						                                	</td>
+						                                	<td>
+						                                		<div class="form-group">
+														    		<div class="col-sm-7 col-md-7">
+														    			<div class="input-group">
+														    				<div id="radioBtn" class="btn-group">
+														    					<a class="btn-sm <%if(delquyen == true){out.print("active btn btn-primary");}else{out.print("btn btn-danger");}; %>" data-toggle="happy" data-title="Y">Bật</a>
+														    					<a class="btn-sm <%if(delquyen == false){out.print("notactive btn btn-primary");}else{out.print("btn btn-danger");}; %>" data-toggle="happy" data-title="N">Tắt</a>
+														    				</div>
+														    				<input type="hidden" name="happy" id="happy">
+														    			</div>
+														    		</div>
+														    	</div>
+						                                	</td>
+						                                	<td class="center">
+	    				                                        <a href="" title="" class="btn btn-danger"><i class="fa fa-edit "></i>&nbsp;Thay đổi</a>
+	    				                                    </td>
+						                                </tr>
+		                                			<%
+		                                		}
+		                                	%>
+	                                	<%
+	                                }
+                                %>
+	                                
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <!--End Advanced Tables -->
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById("usermanager").classList.add('active-menu');
+</script>
+
+<script>
+    document.getElementById("phanquyen").classList.add('active-menu');
+</script>
+<script>
+$(document).on("click",".char-art",function() {
+	$('btn-group').find($('a.add-tat').addClass("btn btn-primary"))
+</script>
+<!-- /. PAGE INNER  -->
+<%@ include file="/templates/admin/inc/footer.jsp" %>

@@ -1,0 +1,35 @@
+<urlrewrite>
+<!-- public -->
+
+	<rule>
+		<!-- /chi-tiet/chay-that-nhanh-3 -->
+		<from>/chi-tiet/(.*)-([0-9]*).html</from>
+		<to>/detail?sid=$2</to>
+	</rule>
+	<rule>
+		<!-- /danh-muc/nhac-tru-tinh-3 -->
+		<from>/danh-muc/(.*)-([0-9]*).html</from>
+		<to>/cat?cid=$2</to>
+	</rule>
+	
+	<rule>
+		<!-- /home?page=2 -->
+		<from>/(.*)-([0-9]*).html</from>
+		<to>/?page=$2</to>
+	</rule>
+	
+	<rule>
+		<!-- /contact -->
+		<from>/lien-he.html</from>
+		<to>/contact</to>
+	</rule>
+
+	
+
+	<rule>
+		<!-- /contact?msg/ -->
+		<from>/lien-he/thong-bao-([a-zA-Z]*).html</from>
+		<to>/contact?msg=$1</to>
+	</rule>
+<!-- public -->
+</urlrewrite>

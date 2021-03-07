@@ -1,0 +1,13 @@
+
+Oct 25, 2020 10:56:43.58 NEW SESSION
+Oct 25, 2020 10:56:43.58 [1025/105643.552:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+Oct 25, 2020 11:52:50.13 [10288:6492:1025/115250.139:ERROR:socket_stream.cc(219)] Closing stream with result -2
+
+Oct 27, 2020 11:04:39.07 NEW SESSION
+Oct 27, 2020 11:04:39.07 [1027/110439.073:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+
+Oct 30, 2020 01:39:50.10 NEW SESSION
+Oct 30, 2020 01:39:50.10 [1030/013950.097:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+
+Nov 01, 2020 19:45:55.17 NEW SESSION
+Nov 01, 2020 19:45:55.17 [1101/194555.122:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
